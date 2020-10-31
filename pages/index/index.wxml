@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="index">
-  <scroll-view class="main" scroll-y="true" bindscrolltoupper="back" bindscrolltolower="next">
-    <video id="myvideo" src="{{ videoUrl }}" enable-auto-rotation="true" autoplay="true" loop="true" bindfullscreenchange="screenchange" bindtimeupdate="speedChange"></video>
+  <scroll-view class="main" scroll-y="true" bindscrolltoupper="back" bindscrolltolower="next" style="scrollTop:{{crollaTopVal}}rpx">
+    <video id="myvideo" src="{{ nowvideo.video }}" enable-auto-rotation="true" autoplay="true" loop="true" bindfullscreenchange="screenchange" bindtimeupdate="speedChange"></video>
     <view class="recommend" bind:tap="go_login">
       <view class="title">推荐</view>
       <image src="/image/down_line.png" style="height: 6rpx;width: 78rpx;" />
@@ -39,11 +39,11 @@
     </view>
     <!-- 描述 -->
     <view class="describe">
-      <view class="name">《镜头下的少年》</view>
+      <view class="name">《{{ nowvideo.name }}》</view>
       <view class="content">
-        <view class="left">“</view>
-        <view class="main">一个少年从小的电影梦一个少年从小的电影梦</view>
-        <view class="right">”</view>
+        <!-- <view class="left">“</view> -->
+        <view class="main">{{ nowvideo.title }}</view>
+        <!-- <view class="right">”</view> -->
       </view>
     </view>
     <!-- 评论弹框 -->

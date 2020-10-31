@@ -1,6 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
+    //开始首次加载操作提示
+    wx.clearStorageSync('isFirst')
+
+    wx.setStorageSync('userOpenid', '')
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

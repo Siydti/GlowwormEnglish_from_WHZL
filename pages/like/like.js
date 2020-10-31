@@ -1,3 +1,5 @@
+import { msg } from '../../utils/request.js'
+
 // pages/like/like.js
 Page({
 
@@ -12,7 +14,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      
+      if( !wx.getStorageSync('username') ) {
+        msg( '登录后查看关注列表，即将自动跳转至登录页面···' )
+
+        setTimeout( () => {
+          wx.redirectTo({
+            url: '../login/login',
+          })
+        } , 1500 )
+      }
   },
 
   /**

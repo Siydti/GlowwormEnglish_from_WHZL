@@ -18,6 +18,12 @@ Page({
     })
   },
   onLoad: function () {
+    if( !wx.getStorageSync('username') ) {
+        wx.redirectTo({
+          url: '../login/login',
+        })
+    }
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

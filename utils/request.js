@@ -18,7 +18,7 @@ var header = {
  * @startMsg 是否开启请求提示 true 开启 false关闭,默认开启
  * @msg 请求时，提示文本
  */
-function post(url, params, onSuccess, onFailed, msg = '正在提交', startMsg = true) {
+export function post(url, params, onSuccess, onFailed, msg = '正在提交', startMsg = true) {
   request(url, params, "POST", onSuccess, onFailed, msg, startMsg);
 }
 
@@ -31,7 +31,7 @@ function post(url, params, onSuccess, onFailed, msg = '正在提交', startMsg =
  * @startMsg 是否开启请求提示 true 开启 false关闭,默认开启
  * @msg 请求时，提示文本
  */
-function get(url, params, onSuccess, onFailed, msg = '加载中', startMsg = true) {
+export function get(url, params, onSuccess, onFailed, msg = '加载中', startMsg = true) {
   request(url, params, "GET", onSuccess, onFailed, msg, startMsg);
 }
 
@@ -42,7 +42,7 @@ function get(url, params, onSuccess, onFailed, msg = '加载中', startMsg = tru
  * @icon 提示图片
  */
 
-function msg(text, time = 1500, icon = 'none') {
+export function msg(text, time = 1500, icon = 'none') {
   wx.showToast({
     title: text,
     icon: icon,
@@ -71,7 +71,7 @@ function request(url, params, method, onSuccess, onFailed, msg, startMsg) {
     })
   }
   wx.request({
-    url: 'http://47.107.92.235/ysj/public/index.php/' + url,
+    url: 'https://yiyayuyin.cdwhzl.com/api/index/' + url,
     data: dealParams(params),
     method: method,
     header: header,
@@ -118,9 +118,7 @@ function dealParams(params) {
 }
 
 
-// 1.通过module.exports方式提供给外部调用
-module.exports = {
-  post: post,
-  get: get,
-  msg:msg,
-}
+/* 
+  视频头部
+*/
+export const http = 'http://yiyavideo.test.upcdn.net'

@@ -1,3 +1,5 @@
+import { post , msg } from '../../utils/request.js'
+
 // pages/login/login.js
 Page({
 
@@ -6,6 +8,17 @@ Page({
    */
   data: {
 
+  },
+
+  loginBtn() {
+    wx.login({
+      success(res) {
+        console.log( res )
+        post( 'getUserInfo' , { code: res.code } , res => {
+          console.log( res )
+        } )
+      },
+    })
   },
 
   /**
