@@ -1,0 +1,39 @@
+<view class="storeroom">
+    <view class="main">
+        <view class="title">
+            <image src="/image/p__sousuo.png" style="width:37rpx;height:38rpx;margin-left:40rpx;margin-right:120rpx;" />
+            <input placeholder="请输入你想查找的内容" />
+        </view>
+        <view class="list" wx:for="{{3}}" wx:key="index">
+            <view class="top">
+                <view class="left"></view>
+                <view class="right">
+                    <view class="title">《米奇奇妙屋》</view>
+                    <view class="time">2020-07-07</view>
+                    <view class="content">
+                        米奇老鼠，迪士尼代表角色形象，是一只有着圆滚滚的大脑袋、圆滚滚的大耳朵、梨形的身体与像橡胶软管一样柔软、没有明显的关节、可以自由拉伸仿佛没有骨骼的四肢的小老鼠。他以随和，乐观，活跃，充满奇思妙想的性格广受世界各地的观众的欢迎。
+                    </view>
+                </view>
+            </view>
+
+            <view class="bottom">
+
+                <view class="title">精选片段（4）</view>
+
+                <view class="fragmentListBox">
+
+                    <view class="fragmentList" wx:for="{{4}}" wx:key="index">
+                        <view class="imgs"></view>
+                        <view class="name">《米奇溜狗狗》</view>
+                        <view class="content">“孙孙真无情，让美女掉了眼
+泪真是个渣男，呸！”</view>
+                    </view>
+
+                </view>
+
+            </view>
+
+        </view>
+    </view>
+    <tabbar commentCount='{{nowPage}}'></tabbar>
+</view>

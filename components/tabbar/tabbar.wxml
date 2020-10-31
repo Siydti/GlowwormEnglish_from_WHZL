@@ -1,0 +1,7 @@
+<view class="tabbar">
+
+    <view class="list {{  index == commentCount ? 'active' : '' }}" wx:for="{{tabbarList}}" wx:key="index" bind:tap="active" data-index="{{index}}">
+    {{item}}
+    </view>
+
+</view>

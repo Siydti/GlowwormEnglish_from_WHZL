@@ -1,0 +1,50 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.amend {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding-left: 30rpx;
+}
+.amend .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e8e8e8;
+  height: 103rpx;
+  width: 720rpx;
+}
+.amend .head .img {
+  width: 69rpx;
+  height: 68rpx;
+  border-radius: 50%;
+  background-color: aqua;
+  margin-right: 36rpx;
+}
+.amend .name,
+.amend .phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 103rpx;
+  width: 720rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+.amend .name .content,
+.amend .phone .content {
+  flex: 1;
+  font-size: 30rpx;
+  color: #aaaaaa;
+}
+.amend .name van-icon,
+.amend .phone van-icon {
+  color: #cccccc;
+  font-size: 28rpx;
+}
+.amend .title {
+  width: 120rpx;
+  color: #666666;
+  margin-right: 90rpx;
+}

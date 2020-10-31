@@ -1,0 +1,157 @@
+<!-- index.wxml -->
+<view class="index">
+  <scroll-view class="main" scroll-y="true" bindscrolltoupper="back" bindscrolltolower="next">
+    <video id="myvideo" src="{{ videoUrl }}" enable-auto-rotation="true" autoplay="true" loop="true" bindfullscreenchange="screenchange" bindtimeupdate="speedChange"></video>
+    <view class="recommend" bind:tap="go_login">
+      <view class="title">推荐</view>
+      <image src="/image/down_line.png" style="height: 6rpx;width: 78rpx;" />
+    </view>
+    <image src="/image/p__sousuo.png" class="search" />
+    <view class="aside">
+
+      <view class="good">
+        <image src="/image/good.png" style="width:48rpx;height:50rpx;" />
+      </view>
+      <view class="like">
+        <image src="/image/like.png" style="width:48rpx;height:40rpx;" />
+      </view>
+      <view class="comment" bind:tap="commentShowTrue">
+        <image src="/image/comment.png" style="width:48rpx;height:47rpx;" />
+      </view>
+      <view class="share" bind:tap="shareShowTrue">
+        <image src="/image/share.png" style="width:44rpx;height:44rpx;" />
+      </view>
+
+      <view class="speed">
+        <!-- <view bindtap="setSpeed" data-index="0.5">0.5倍速</view> -->
+        <view class="speedBtn" bind:tap="speedIsShow">倍速</view>
+        <ul wx:if="{{speedShow}}">
+          <li class="speed_li" bindtap="setSpeed" data-index="0.5">0.5倍速</li>
+          <li class="speed_li" bindtap="setSpeed" data-index="1">正常速</li>
+          <li class="speed_li" bindtap="setSpeed" data-index="1.5">1.5倍速</li>
+        </ul>
+      </view>
+
+    </view>
+    <view class="lookNext" bind:tap="unlockShowTrue">
+      <image src="/image/lookNext_bac.png" style="width:100%;height:100%" />
+      <view>下一页</view>
+    </view>
+    <!-- 描述 -->
+    <view class="describe">
+      <view class="name">《镜头下的少年》</view>
+      <view class="content">
+        <view class="left">“</view>
+        <view class="main">一个少年从小的电影梦一个少年从小的电影梦</view>
+        <view class="right">”</view>
+      </view>
+    </view>
+    <!-- 评论弹框 -->
+    <van-popup show="{{ commentIsShow }}" round position="bottom" custom-style="height: 680rpx" bind:close="commentShowFalse">
+      <view class="commentShow">
+        <view class="top">
+          <view class="img"></view>
+          <input type="text" placeholder="我也来说几句" />
+        </view>
+
+        <view class="list" wx:for="{{4}}" wx:key="index">
+          <view class="listTop">
+            <view class="personage">
+              <view class="headImg"></view>
+              <view class="box">
+                <view class="name">安怼怼</view>
+                <view class="time">2020.07.07</view>
+              </view>
+            </view>
+
+            <view class="goodBtnTrue">
+            <image src="/image/goodSel.png" style="width:33rpx;height:33rpx;margin-right:16rpx;" />
+            <text>赞</text>
+            </view>
+          </view>
+          <view class="msg">这个视频666</view>
+        </view>
+      </view>
+    </van-popup>
+
+
+    <!-- 分享弹框 -->
+    <van-popup show="{{ shareIsShow }}" round position="bottom" custom-style="height: 300rpx" bind:close="shareShowFalse">
+
+      <view class="shareShow">
+
+        <view class="oneself">
+        <image src="/image/wechart.png" />
+        <button>分享给好友</button>
+      </view>
+
+      <view class="people">
+        <image src="/image/people.png" />
+        <button>分享至朋友圈</button>
+      </view>
+
+      </view>
+
+    </van-popup>
+
+
+    <!-- 录音弹框 -->
+    <view class="unlock" wx:if="{{unlockIsShow}}">
+
+      <view class="unlock_main">
+          <image src="/image/beibri@2x.png" style="width:100%;height:300rpx;position:absolute;top:0;left:0;"/>
+
+        <view class="unlock_title">
+            <view class="top">解锁录音</view>
+            <view class="bottom">请跟学下列短语，解锁下段视频</view>
+        </view>
+
+        <view class="unlock_mid">
+
+          <image src="/image/record.png" style="width:168rpx;height:168rpx;position:absolute;left: 50%;transform: translateX(-50%);top:-65rpx" />
+
+          <view class="unlock_mid_content">
+            “It's a fine day today. 
+          </view>
+
+          <view class="unlock_mid_content">
+            It's beautiful everywhere”
+          </view>
+
+        </view>
+
+        <button class="begin" bind:tap="unlockShowFalse">点 击 录 音</button>
+
+      </view>
+
+      <image src="/image/unlock.png" class="unlockBottom" />
+
+    </view>
+
+
+    <!-- 提示弹框 -->
+    <view class="hintBox" wx:if="{{hintBoxIsShow}}">
+
+      <view class="hint_main">
+
+        <view style="margin-bottom:36rpx;">上下滑动查看更多视频推荐</view>
+
+        <view class="hint_top">
+          <image src="/image/upDown.png" style="width:35rpx;height:300rpx;" />
+          <image src="/image/hand.png" style="width:54rpx;height:67rpx" />
+        </view>
+
+        <button class="kownBtn" bind:tap="hintBoxShowFlase">我知道了</button>
+
+        <view style="margin-bottom:40rpx">点击下一页查看相关视频片段</view>
+
+        <image src="/image/click.png" class="hind_bottom" style="width:81rpx;height:110rpx;" />
+
+      </view>
+
+    </view>
+
+  </scroll-view>
+  <!-- tabbar -->
+  <tabbar commentCount='{{nowPage}}'></tabbar>
+</view>

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/storeroom/storeroom",
+    "pages/my/my",
+    "pages/like/like",
+    "components/tabbar/tabbar",
+    "pages/amend/amend",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1F1F1F",
+    "navigationBarTitleText": "短视频",
+    "navigationBarTextStyle": "white"    
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

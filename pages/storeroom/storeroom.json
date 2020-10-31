@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar"
+  },
+  "navigationBarTitleText": "电影库"
+}

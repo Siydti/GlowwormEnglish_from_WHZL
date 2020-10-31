@@ -1,0 +1,40 @@
+<view class="like">
+
+    <view class="main">
+        
+        <view class="title">
+
+            <image src="/image/p__sousuo.png" style="width:37rpx;height:38rpx;margin-left:40rpx;margin-right:120rpx;"/>
+
+            <input placeholder="请输入你想查找的内容" />
+
+        </view>
+
+        <view class="list" wx:for="{{3}}" wx:key="index">
+
+            <view class="main">
+                <image src="/image/likeSel.png" class="likeBtn" />
+                <image src="/image/video_play.png" class="playBtn" />
+            </view>
+
+            <view class="bottom">
+                <view class="left">
+
+                    <view class="name">《镜头下的少年》</view>
+                    <view class="describe">
+                        <view >“</view>
+                        <view class="describe_main">一个少年从小的电影梦一个少年从小的电影梦</view>
+                        <view >”</view>
+                    </view>
+
+                </view>
+                <view class="right">2020-07-07</view>
+            </view>
+
+        </view>
+
+    </view>
+
+    <tabbar commentCount='{{nowPage}}'></tabbar>
+
+</view>

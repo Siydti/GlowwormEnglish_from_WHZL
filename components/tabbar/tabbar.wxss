@@ -1,0 +1,28 @@
+.tabbar {
+  height: 98rpx;
+  width: 100%;
+  background-color: #111111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tabbar .list {
+  color: #999999;
+  font-size: 32rpx;
+}
+.tabbar .active {
+  color: #fff;
+  font-size: 36rpx;
+  position: relative;
+}
+.tabbar .active::after {
+  content: '';
+  display: block;
+  width: 38rpx;
+  height: 3rpx;
+  background-color: #26baff;
+  position: absolute;
+  bottom: -10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

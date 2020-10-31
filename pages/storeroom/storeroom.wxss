@@ -1,0 +1,111 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.storeroom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.storeroom .main {
+  flex: 1;
+  overflow: scroll;
+  background-color: #1F1F1F;
+}
+.storeroom .main > .title {
+  width: 680rpx;
+  height: 66rpx;
+  background-color: #2e2e2e;
+  border-radius: 66rpx;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 28rpx;
+  line-height: 66rpx;
+}
+.storeroom .main .list {
+  background-color: #2e2e2e;
+  margin-top: 20rpx;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+  width: 680rpx;
+  margin-left: 35rpx;
+}
+.storeroom .main .list .top {
+  display: flex;
+}
+.storeroom .main .list .top .left {
+  width: 160rpx;
+  height: 212rpx;
+  background-color: #ccc;
+  margin: 14rpx;
+}
+.storeroom .main .list .top .right {
+  flex: 1;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.storeroom .main .list .top .right .title {
+  font-size: 36rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 12rpx;
+}
+.storeroom .main .list .top .right .time {
+  font-size: 18rpx;
+  margin-bottom: 12rpx;
+}
+.storeroom .main .list .top .right .content {
+  font-size: 18rpx;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 26rpx;
+}
+.storeroom .main .list .bottom {
+  padding-left: 10rpx;
+  color: #fff;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.storeroom .main .list .bottom .title {
+  font-size: 26rpx;
+  margin-bottom: 14rpx;
+}
+.storeroom .main .list .bottom .fragmentListBox {
+  display: flex;
+  overflow-x: scroll;
+}
+.storeroom .main .list .bottom .fragmentListBox .fragmentList {
+  margin-right: 10rpx;
+}
+.storeroom .main .list .bottom .fragmentListBox .fragmentList .imgs {
+  width: 200rpx;
+  height: 150rpx;
+  background-color: aquamarine;
+  margin-bottom: 14rpx;
+}
+.storeroom .main .list .bottom .fragmentListBox .fragmentList .name {
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+  width: 200rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.storeroom .main .list .bottom .fragmentListBox .fragmentList .content {
+  width: 200rpx;
+  color: #cccccc;
+  font-size: 16rpx;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}

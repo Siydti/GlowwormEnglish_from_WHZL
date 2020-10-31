@@ -1,0 +1,30 @@
+<!-- index.wxml -->
+<view class="my">
+  <view class="main">
+    <!-- <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        获取头像昵称
+      </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view> -->
+    <view class="top">
+      <view class="box">
+        <image src="/image/my_bac.png" style="width:100%;height:100%" />
+        <view class="content">
+          <view class="head"></view>
+          <view class="name">田小甜</view>
+          <view class="phone">15002023030</view>
+        </view>
+
+        <image src="/image/amend.png" class="amend" bind:tap="go_amend"/>
+      </view>
+    </view>
+  </view>
+  <tabbar commentCount='{{nowPage}}'></tabbar>
+</view>
